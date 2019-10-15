@@ -89,5 +89,5 @@ def view_card(for_id):
 
 if __name__ == '__main__':
     Timer(0,start_scheduling).start()
-    app.run().start()
+    app.run()
 
