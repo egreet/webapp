@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+             background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
+             background-size: cover;
+             color:white;
+        }
+        .container{
+            margin-top:150px;
+            height:250px;
+            background-color:rgba(72,72,72,0.4);
+            width:540px;
+            padding-top:50px;
+        }
+        .container textarea{
+            width:500px;
+            resize:none;
+        }
+        .container .submit{
+        width: 506px;
+        height: 50px;
+        background: #3498db;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin-top: 10px;
+}
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <center><h1>Welcome {{name}}, send wishes to {{name_rec}}</h1></center>
+    <center>
+    <div class="container">
+    <form action="/message" method="POST">
+        <input type="text" value="{{name}}" name="name" style="display:none;">
+        <input type="text" value="{{emp_id}}" name="for_id" style="display:none;">
+        <input type="text" value="{{s_emp_id}}" name="from_id" style="display:none;">
+        <textarea name="mssg" rows="10" cols="30" placeholder="Enter your wishes here..."></textarea>
+        <br>
+        <input type="submit" class="submit">
+    </form>
+    </div>
+    </center>
+</body>
+</html>
